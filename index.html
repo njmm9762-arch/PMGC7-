@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>بطولة PMGC</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- شاشة الترحيب -->
+<div class="welcome-screen" id="welcomeScreen">
+  <div class="welcome-text" id="welcomeText">
+    ✨ أهلاً وسهلاً بك في بطولة PMGC ✨
+  </div>
+  <button onclick="enterSite()">دخول</button>
+</div>
+
+<!-- المحتوى الرئيسي -->
+<div id="mainContent" style="display:none;">
+
+  <header>
+    <h1 id="title">بطولة PMGC</h1>
+    <p id="subtitle">مرحبًا بك في الموقع الرسمي للبطولة</p>
+    <button onclick="toggleLang()">🌍 تغيير اللغة</button>
+  </header>
+
+  <!-- اللاعبين -->
+  <section class="players">
+    <h2 id="playersTitle">اللاعبون المقبولون</h2>
+    <div id="playersList"></div>
+  </section>
+
+  <!-- دخول الإداري -->
+  <div class="admin-login" id="adminLogin">
+    <input type="password" id="adminPassword" placeholder="كلمة سر الإداري">
+    <button onclick="adminLogin()">دخول إداري</button>
+  </div>
+
+  <!-- لوحة تحكم الإداري -->
+  <div id="adminPanel" class="admin-panel" style="display:none;">
+    <h3>لوحة تحكم الإداري</h3>
+    <p>✔ تم تسجيل الدخول كإداري</p>
+  </div>
+
+  <!-- التعليقات -->
+  <section class="comments">
+    <h2>تعليقات البطولة</h2>
+    <div class="add-comment">
+      <input type="text" id="commentText" placeholder="اكتب تعليقك">
+      <button onclick="addComment()">نشر</button>
+    </div>
+    <div id="commentsList"></div>
+  </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
